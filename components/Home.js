@@ -34,7 +34,7 @@ const Home = ({ navigation }) => {
                     <FilmsList films={films} handleOnPress={onPressFilm} />
                 </ScrollView>
             </View>
-        </ImageBackground>
+        </ImageBackground >
     );
 }
 
@@ -44,12 +44,6 @@ const styles = StyleSheet.create({
         marginRight: 'auto',
         marginTop: 15,
         height: '100%',
-    },
-    subtitle: {
-        color: '#ffe81f',
-        fontWeight: 'bold',
-        fontSize: 25,
-        textAlign: 'center'
     },
     contentContainer: {
         paddingVertical: 20

@@ -18,7 +18,7 @@ const CharactersFilm = ({ route, navigation }) => {
                     </View>
                 </ScrollView>
             </View>
-        </ImageBackground >
+        </ImageBackground>
     )
 }
 
