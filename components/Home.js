@@ -1,12 +1,10 @@
 import { useState, useEffect } from 'react';
-import { Image, ScrollView, StyleSheet, Text, View, ImageBackground } from 'react-native';
+import { ScrollView, StyleSheet, View, ImageBackground } from 'react-native';
 import fetchFromApi, { fetchAllCharacters } from '../data/fetchApi.js';
 import FilmsList from './FilmsList.js';
 import HeaderContainerApp from './HeaderContainerApp';
 
 const Home = ({ navigation }) => {
-
-    const image = { uri: '../assets/background.jpg' };
 
     const [films, setFilms] = useState([]);
     const [characterList, setCharacterList] = useState([]);

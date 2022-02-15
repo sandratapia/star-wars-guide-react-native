@@ -3,13 +3,11 @@ import { View, StyleSheet } from 'react-native'
 
 const FilmsList = ({ films, handleOnPress }) => {
 
-    const orderedFilms = films.sort(function (a, b) {
-        return a.id - b.id;
-    });
+    const sortedFilms = films.sort((a, b) => a.id - b.id);
 
     return (
         <View style={styles.containerFilms}>
-            {orderedFilms.map(film => {
+            {sortedFilms.map(film => {
                 return (
                     <FilmCard
                         key={film.id}

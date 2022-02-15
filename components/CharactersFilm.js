@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, ScrollView, Image, ImageBackground } from 'react-native'
+import { View, Text, StyleSheet, ScrollView, ImageBackground } from 'react-native'
 import HeaderContainerApp from './HeaderContainerApp';
 
 const CharactersFilm = ({ route, navigation }) => {
@@ -34,12 +34,6 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
     },
-    subtitle: {
-        color: '#ffe81f',
-        fontWeight: 'bold',
-        fontSize: 25,
-        textAlign: 'center'
-    },
     contentContainer: {
         paddingVertical: 20
     },
@@ -54,7 +48,6 @@ const styles = StyleSheet.create({
         paddingBottom: 15,
         borderRadius: 15,
     },
-
 });
 
 export default CharactersFilm;

@@ -15,11 +15,11 @@ const fetchFromApi = () => {
         });
 }
 
-export const fetchFromCharacters = () => {
-    return fetch(charactersUrl)
-        .then(response => response.json())
-        .then(data => data.results);
-}
+// export const fetchFromCharacters = () => {
+//     return fetch(charactersUrl)
+//         .then(response => response.json())
+//         .then(data => data.results);
+// }
 
 export const fetchAllCharacters = async () => {
     let characters = [];

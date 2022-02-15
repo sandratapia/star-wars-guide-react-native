@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, ScrollView, Image, ImageBackground } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, ImageBackground } from 'react-native';
 import HeaderContainerApp from './HeaderContainerApp';
 
 const CharacterProfile = ({ route }) => {
@@ -29,12 +29,6 @@ const styles = StyleSheet.create({
         marginRight: 'auto',
         marginTop: 15,
         height: '100%',
-    },
-    subtitle: {
-        color: '#ffe81f',
-        fontWeight: 'bold',
-        fontSize: 25,
-        textAlign: 'center'
     },
     contentContainer: {
         paddingVertical: 20

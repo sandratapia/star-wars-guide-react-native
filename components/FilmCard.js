@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from 'react'
 import { StyleSheet, View, Text } from 'react-native'
 
-const FilmCard = ({ id, title, characters, image, handleOnPress }) => {
+const FilmCard = ({ id, title, handleOnPress }) => {
 
     return (
         <View key={id}>
