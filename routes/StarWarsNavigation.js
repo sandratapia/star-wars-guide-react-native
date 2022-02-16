@@ -1,12 +1,12 @@
 import { createStackNavigator } from '@react-navigation/stack'
 import React from 'react'
-import CharacterProfile from '../components/CharacterProfile.js';
-import CharactersFilm from '../components/CharactersFilm.js'
-import Home from '../components/Home.js';
+import CharacterProfile from '../pages/CharacterProfile.js';
+import CharactersFilm from '../pages/CharactersFilm.js'
+import Home from '../pages/Home.js';
 
 const Stack = createStackNavigator();
 
-const MyStack = () => {
+const StarWarsNavigation = () => {
     return (
         <Stack.Navigator
             screenOptions={{
@@ -27,4 +27,4 @@ const MyStack = () => {
     )
 }
 
-export default MyStack
+export default StarWarsNavigation;

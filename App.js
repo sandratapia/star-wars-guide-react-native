@@ -1,13 +1,12 @@
 
 import { NavigationContainer } from '@react-navigation/native';
-import MyStack from './routes/MyStack.js';
-
+import StarWarsNavigation from './routes/StarWarsNavigation.js';
 
 function App() {
 
   return (
     <NavigationContainer>
-      <MyStack />
+      <StarWarsNavigation />
     </NavigationContainer>
   );
 }

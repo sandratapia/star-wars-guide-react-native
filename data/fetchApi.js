@@ -1,7 +1,7 @@
 const url = 'https://swapi.dev/api/films';
 const charactersUrl = 'https://swapi.dev/api/people';
 
-const fetchFromApi = () => {
+export const fetchFilms = () => {
     return fetch(url)
         .then((response) => response.json())
         .then((data) => {
@@ -15,29 +15,17 @@ const fetchFromApi = () => {
         });
 }
 
-// export const fetchFromCharacters = () => {
-//     return fetch(charactersUrl)
-//         .then(response => response.json())
-//         .then(data => data.results);
-// }
-
-export const fetchAllCharacters = async () => {
-    let characters = [];
-    await fetch(charactersUrl)
-        .then(response => response.json())
-        .then(async response => {
-            characters = characters.concat(response.results);
-            let currentResponse = response;
-            while (currentResponse.next) {
-                const newResponse = await fetch(currentResponse.next)
-                    .then(response => response.json())
-                    .then(response => {
-                        currentResponse = response;
-                        characters = characters.concat(currentResponse.results);
-                    })
-            }
-        })
-    return characters;
+const syncFetchCharacters = async (url) => {
+    const response = await fetch(url).then(response => response.json());
+    return response;
 }
 
-export default fetchFromApi;
+export const fetchAllCharacters = async () => {
+    let response = await syncFetchCharacters(charactersUrl);
+    let characters = response.results;
+    while (response.next) {
+        response = await syncFetchCharacters(response.next);
+        characters = characters.concat(response.results);
+    }
+    return characters;
+}

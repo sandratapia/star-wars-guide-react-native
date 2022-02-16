@@ -13,8 +13,6 @@ const FilmsList = ({ films, handleOnPress }) => {
                         key={film.id}
                         id={film.id}
                         title={film.title}
-                        characters={film.characters}
-                        image={film.image}
                         handleOnPress={handleOnPress}
                     />
                 )
